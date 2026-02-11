@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Tasbeh 4.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Auto Tasbeh</h1>
+
+        <div class="circle-wrapper">
+            <div class="circle-progress" id="circleProgress">
+                <div class="count-circle" onclick="increment()">
+                    <div id="count">0</div>
+                </div>
+            </div>
+
+            <div class="percent-circle">
+                <span id="percentText">0%</span>
+            </div>
+        </div>
+
+        <!-- AUTO BLOCK -->
+        <div class="auto-wrapper">
+            <h3>Avtomatik hisoblash</h3>
+            <button onclick="startAuto()">Boshlash</button>
+            <button onclick="stopAuto()">To'xtash</button>
+            <button class="reset" onclick="resetCounter()">O'chirish</button>
+
+            <div class="sheets">
+                <label>Vaqt tezligi:</label>
+                <span id="speedValue">1.0 s</span>
+                <br>
+                <input type="range" id="speedRange" min="600" max="9900" step="100" value="1000">
+            </div>
+        </div>
+        <br>
+        
+        <div class="goal-box">
+            <input type="number" id="goalInput" placeholder="Tasbeh soni">
+            <button onclick="setGoal()">OK</button><button id="soundBtn" onclick="toggleSound()">🔊 ON</button>
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
